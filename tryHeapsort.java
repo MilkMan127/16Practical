@@ -60,4 +60,10 @@ public class MyHeapSort {
             }
         }
     }
+    public static void buildHeapTopDown(String[] arr) {
+
+        for (int i = 1; i < arr.length; i++) {
+            insert(arr, i);
+        }
+    }
 
