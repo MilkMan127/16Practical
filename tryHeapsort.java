@@ -42,3 +42,22 @@ public class MyHeapSort {
             heapify(arr, i, 0);
         }
     }
+     public static void insert(String[] heap, int index) {
+
+        int parent;
+
+        while (index > 0) {
+
+            parent = (index - 1) / 2;
+
+            if (heap[index].compareTo(heap[parent]) > 0) {
+
+                swap(heap, index, parent);
+                index = parent;
+
+            } else {
+                break;
+            }
+        }
+    }
+
