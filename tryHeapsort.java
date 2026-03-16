@@ -32,7 +32,7 @@ public class MyHeapSort {
             heapify(arr, n, i);
         }
     }
-}
+
  public static void heapSort(String[] arr) {
 
         int n = arr.length;
@@ -79,3 +79,29 @@ public static void main(String[] args) {
 
         String[] words1 = testWords();
         String[] words2 = words1.clone();
+         long start1 = System.nanoTime();
+
+        buildHeapBottomUp(words1);
+        heapSort(words1);
+
+        long end1 = System.nanoTime();
+
+        // Top-down timing
+        long start2 = System.nanoTime();
+
+        buildHeapTopDown(words2);
+        heapSort(words2);
+
+        long end2 = System.nanoTime();
+
+        System.out.println("Sorted words (Bottom-Up):");
+        System.out.println(Arrays.toString(words1));
+
+        System.out.println("\nSorted words (Top-Down):");
+        System.out.println(Arrays.toString(words2));
+
+        System.out.println("\nTiming Results:");
+        System.out.println("Bottom-Up Heap Build + Sort: " + (end1 - start1) + " ns");
+        System.out.println("Top-Down Heap Build + Sort: " + (end2 - start2) + " ns");
+    }
+}
