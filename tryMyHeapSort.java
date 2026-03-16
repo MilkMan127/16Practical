@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class MyHeapSort {
+public class tryMyHeapSort {
 
     public static void swap(String[] arr, int i, int j) {
         String temp = arr[i];
