@@ -33,4 +33,12 @@ public class MyHeapSort {
         }
     }
 }
+ public static void heapSort(String[] arr) {
 
+        int n = arr.length;
+
+        for (int i = n - 1; i > 0; i--) {
+            swap(arr, 0, i);
+            heapify(arr, i, 0);
+        }
+    }
