@@ -66,4 +66,13 @@ public class MyHeapSort {
             insert(arr, i);
         }
     }
+      public static String[] testWords() {
+
+        return new String[]{
+                "apple","orange","banana","grape","pear",
+                "kiwi","melon","peach","plum","mango",
+                "berry","lime","lemon","fig","date",
+                "guava","papaya","apricot","coconut","cherry"
+        };
+    }
 
