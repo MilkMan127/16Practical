@@ -75,4 +75,7 @@ public class MyHeapSort {
                 "guava","papaya","apricot","coconut","cherry"
         };
     }
+public static void main(String[] args) {
 
+        String[] words1 = testWords();
+        String[] words2 = words1.clone();
